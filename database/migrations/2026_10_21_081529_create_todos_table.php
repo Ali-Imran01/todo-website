@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('todos', function (Blueprint $table) {
             $table->id();
+            $table->string('title');
+            $table->boolean('done')->default(false);
 
             // TODO 1: Add the columns a todo needs.
             //         At minimum: a title (text) and whether it's done (yes/no).
